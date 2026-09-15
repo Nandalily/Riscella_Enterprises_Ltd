@@ -4,5 +4,6 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-   base: '/Riscella_Enterprises_Ltd/', // 
+  base: '/', //  base: '/Riscella_Enterprises_Ltd/', // npm run deploy
+
 })
