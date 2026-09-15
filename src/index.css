@@ -280,6 +280,7 @@ textarea {
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 6px;
+  border-left: 4px solid var(--navy-deep);
   padding: 20px 18px 22px;
   min-height: 168px;
 }
@@ -312,18 +313,21 @@ textarea {
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 22px;
+  
+  
 }
 
 .brand-tile {
   min-height: 92px;
   border: 1px solid var(--line);
   border-radius: 6px;
-  background: var(--paper);
+  background: var(--navy-mid);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   padding: 18px;
+  color: #f4f6fa;
 }
 
 .brand-mark {
@@ -335,6 +339,8 @@ textarea {
   place-items: center;
   font-size: 0.7rem;
   font-weight: 700;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  
 }
 
 .logo-merck {
@@ -383,6 +389,11 @@ textarea {
   color: var(--slate);
 }
 
+.body-copy1 {
+  color: var(--white);
+}
+
+
 .vision-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -392,9 +403,12 @@ textarea {
 
 .panel {
   border: 1px solid var(--line);
-  background: var(--paper);
+  background: var(--teal);
   border-radius: 6px;
   padding: 22px;
+  color: var(--navy-mid);
+  border-top: 4px solid var(--navy-deep);
+  
 }
 
 .panel h3,
@@ -416,6 +430,7 @@ textarea {
 .value {
   padding: 16px 8px 0;
   border-top: 2px solid var(--teal);
+  border-left: 2px solid var(--teal);
 }
 
 .value svg,
@@ -449,6 +464,8 @@ textarea {
   flex-wrap: wrap;
   gap: 8px;
   align-items: center;
+  background-color: var(--teal-dark);
+  /* color: var(--white); */
 }
 
 .chips strong {
@@ -504,6 +521,7 @@ textarea {
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: 22px;
+  border-top: 4px solid var(--teal);
 }
 
 .brand-card h3 {
@@ -532,6 +550,7 @@ textarea {
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: 22px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .clients {
@@ -734,5 +753,176 @@ textarea {
 
   .section {
     padding: 48px 0;
+  }
+}
+
+/* =========================
+   PRODUCT CATEGORY TIMELINE
+   ========================= */
+
+   .categories-timeline {
+    position: relative;
+    margin-top: 50px;
+    padding: 10px 0 30px;
+  }
+  
+  /* Central vertical line */
+  .categories-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: var(--line);
+    transform: translateX(-50%);
+  }
+  
+  /* Each timeline item */
+  .category-timeline-item {
+    position: relative;
+    width: 100%;
+    min-height: 190px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Cards */
+  .category-card {
+    width: calc(50% - 55px);
+    padding: 26px 28px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(20, 30, 60, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(20, 30, 60, 0.12);
+  }
+  
+  /* Left cards */
+  .timeline-left {
+    justify-content: flex-start;
+  }
+  
+  .timeline-left .category-card {
+    margin-right: auto;
+  }
+  
+  /* Right cards */
+  .timeline-right {
+    justify-content: flex-end;
+  }
+  
+  .timeline-right .category-card {
+    margin-left: auto;
+  }
+  
+  /* Timeline dot */
+  .timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border: 4px solid var(--primary, #29447e);
+    border-radius: 50%;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timeline-dot span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #f5d44f;
+    display: block;
+  }
+  
+  /* Card heading */
+  .category-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  
+  .category-card-header h3 {
+    margin: 0;
+    color: var(--primary, #29447e);
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  
+  /* Icon */
+  .category-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f6fa;
+    color: var(--primary, #29447e);
+    flex-shrink: 0;
+  }
+  
+  .category-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+  
+  /* Card text */
+  .category-card p {
+    margin: 8px 0;
+    color: #596273;
+    line-height: 1.6;
+    font-size: 0.98rem;
+  }
+  
+  .category-card strong {
+    color: var(--primary, #29447e);
+  }
+
+
+
+  @media (max-width: 768px) {
+  .categories-timeline {
+    padding-left: 35px;
+  }
+
+  /* Move timeline to the left */
+  .categories-timeline::before {
+    left: 15px;
+    transform: none;
+  }
+
+  .category-timeline-item {
+    min-height: auto;
+    padding: 15px 0;
+    justify-content: flex-start !important;
+  }
+
+  .category-card {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .timeline-dot {
+    left: 15px;
+    width: 26px;
+    height: 26px;
+  }
+
+  .timeline-dot span {
+    width: 10px;
+    height: 10px;
   }
 }

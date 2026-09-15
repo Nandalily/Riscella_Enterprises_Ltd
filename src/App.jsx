@@ -132,12 +132,20 @@ export default function App() {
           <div className="hero-shade" />
           <div className="wrap hero-copy">
             <h1>Exceeding Imaginations in Scientific Sourcing &amp; Technical Deployment</h1>
+           
             <div className="hero-actions">
-              <a className="btn btn-teal" href="#products">
-                Explore Our Solutions
+            <p> Empowering East African laboratories with compliance-verified 
+distribution of high-grade chemicals, analytical reagents, and durable laboratory 
+consumables. </p>
+              {/* <a className="btn btn-teal" href="#products"> */}
+              <a className="btn btn-teal" href="#contact">
+              Request a Quote 
+                {/* Explore Our Solutions */}
               </a>
-              <a className="btn btn-ghost" href="/product-catalog.html" download>
-                Download Product Catalog
+              {/* <a className="btn btn-ghost" href="/product-catalog.html" download> */}
+                <a className="btn btn-ghost" href="#products"> 
+              Explore Our Product Categories
+                {/* Download Product Catalog */}
               </a>
             </div>
           </div>
@@ -145,7 +153,7 @@ export default function App() {
 
         <section className="section paper">
           <div className="wrap">
-            <h2 className="section-title">Laboratory Chemicals &amp; Solvents</h2>
+            <h2 className="section-title">What We Deal in &amp; Deliver</h2>
             <div className="cards-4">
               {HOME_CATEGORIES.map((item) => (
                 <article className="mini-card" key={item.name}>
@@ -202,7 +210,7 @@ export default function App() {
             <div className="vision-grid">
               <div className="panel">
                 <h3>Our Vision</h3>
-                <p className="body-copy">
+                <p className="body-copy1">
                   To be the most trusted and preferred scientific supply enterprise across East
                   Africa, recognized for accelerating research outcomes and industrial quality
                   through uncompromised technological excellence and standard-compliant testing.
@@ -210,7 +218,7 @@ export default function App() {
               </div>
               <div className="panel">
                 <h3>Our Mission</h3>
-                <p className="body-copy">
+                <p className="body-copy1">
                   To empower scientific research and industrial quality assurance by delivering
                   precise, reliable, and compliant laboratory supplies with unmatched logistical
                   efficiency.
@@ -242,20 +250,44 @@ export default function App() {
 
         <section className="section paper" id="products">
           <div className="wrap">
-            <p className="section-kicker">Brands &amp; Products</p>
-            <h2 className="heading-lg">Core product categories</h2>
-            <div style={{ marginTop: 28, borderBottom: '1px solid var(--line)' }}>
-              {CATEGORIES.map((cat) => (
-                <div className="cat-row" key={cat.name}>
-                  <h3>
-                    <Icon name={cat.icon} />
-                    {cat.name}
-                  </h3>
-                  <p>{cat.range}</p>
-                  <p>{cat.applications}</p>
-                </div>
-              ))}
-            </div>
+          <p className="section-kicker">Brands &amp; Products</p>
+
+<h2 className="heading-lg">Core product categories</h2>
+
+<div className="categories-timeline">
+  {CATEGORIES.map((cat, index) => (
+    <div
+      className={`category-timeline-item ${
+        index % 2 === 0 ? 'timeline-left' : 'timeline-right'
+      }`}
+      key={cat.name}
+    >
+      {/* Timeline dot */}
+      <div className="timeline-dot">
+        <span></span>
+      </div>
+
+      {/* Category card */}
+      <div className="category-card">
+        <div className="category-card-header">
+          <div className="category-icon">
+            <Icon name={cat.icon} />
+          </div>
+
+          <h3>{cat.name}</h3>
+        </div>
+
+        <p className="category-range">
+          <strong>Range:</strong> {cat.range}
+        </p>
+
+        <p className="category-applications">
+          <strong>Applications:</strong> {cat.applications}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
             <p className="note">
               Custom reagent formulations can be prepared strictly according to your production
               line’s Standard Operating Procedures (SOPs).
