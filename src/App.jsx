@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import heroLabImg from './assets/hero-lab.jpg'; // 👈 1. Import the image at the top
 import {
   ADVANTAGES,
   BRANDS,
@@ -128,7 +129,8 @@ export default function App() {
       <Header active={active} />
       <main id="main">
         <section className="hero" id="home">
-          <img className="hero-bg" src="/hero-lab.jpg" alt="" />
+          <img className="hero-bg" src={heroLabImg} alt="Hero Background" /> 
+          {/* <img className="hero-bg" src="hero-lab.jpg" alt="" /> */}
           <div className="hero-shade" />
           <div className="wrap hero-copy">
             <h1>Exceeding Imaginations in Scientific Sourcing &amp; Technical Deployment</h1>
