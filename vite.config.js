@@ -4,5 +4,6 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/Riscella_Enterprises_Ltd/', // 👈 ADD THIS LINE EXACTLY (with slashes)
+  // base: '/Riscella_Enterprises_Ltd/', // 👈 ADD THIS LINE EXACTLY (with slashes)
+  base: '/',
 })
