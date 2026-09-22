@@ -192,11 +192,12 @@ textarea {
 
 .hero {
   position: relative;
-  min-height: 420px;
+  min-height: 320px;
   color: var(--white);
   overflow: hidden;
-  background: #07182c;
+  background: #4e94e4;
 }
+
 
 .hero-bg {
   position: absolute;
@@ -204,7 +205,8 @@ textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 70% center;
+  object-position: center;
+   z-index: 0;
 }
 
 .hero-shade {
@@ -223,8 +225,8 @@ textarea {
 
 .hero h1 {
   font-family: var(--heading);
-  font-weight: 600;
-  font-size: clamp(1.85rem, 3.4vw, 2.55rem);
+  font-weight: 500;
+  font-size: clamp(1.65rem, 3.2vw, 2.35rem);
   line-height: 1.2;
 }
 
@@ -233,6 +235,60 @@ textarea {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 28px;
+}
+
+.page-hero {
+  position: relative;
+  min-height: 450px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+}
+.page-hero {
+  position: relative;
+  min-height: 450px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: rgba(6, 49, 120, 0.55);
+}
+
+.page-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 49, 120, 0.55);
+  z-index: 1;
+}
+
+.page-hero-inner {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 61, 187, 0.45);
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .section {
@@ -749,6 +805,9 @@ textarea {
 
   .hero-copy {
     padding: 48px 0 56px;
+     margin: 0;
+  margin-right: auto;
+  text-align: left;
   }
 
   .section {
@@ -756,9 +815,56 @@ textarea {
   }
 }
 
+
+.products-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.products-section .hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.products-section .products-content {
+  position: relative;
+  z-index: 2;
+}
+
+.products-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(96, 151, 139, 0.75);
+  z-index: 1;
+}
+
+.products-section .hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.products-section .products-content {
+  position: relative;
+  z-index: 2;
+}
+
+
 /* =========================
    PRODUCT CATEGORY TIMELINE
    ========================= */
+
+   
+
+
 
    .categories-timeline {
     position: relative;
@@ -773,7 +879,7 @@ textarea {
     top: 0;
     bottom: 0;
     left: 50%;
-    width: 2px;
+    width: 22px;
     background: var(--line);
     transform: translateX(-50%);
   }
@@ -789,8 +895,8 @@ textarea {
   
   /* Cards */
   .category-card {
-    width: calc(50% - 55px);
-    padding: 26px 28px;
+    width: calc(100% - 95px);
+    padding: 23px 24px;
     background: #fff;
     border: 1px solid var(--line);
     border-radius: 18px;

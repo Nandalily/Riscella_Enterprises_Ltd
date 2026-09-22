@@ -1,16 +1,42 @@
-# React + Vite
+# Riscella multi-page React migration
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This package contains the multi-page structure for the existing Riscella Vite/React site.
 
-Currently, two official plugins are available:
+## 1. Install
+From your existing project root:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+npm install react-router-dom
 
-## React Compiler
+## 2. Copy these files
+Copy the contents of this package's `src/App.jsx`, `src/components/`, and `src/pages/`
+into the matching locations in your existing project.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Do NOT replace your existing:
+- src/data.js
+- src/icons.jsx
+- src/assets/
+- existing CSS files
 
-## Expanding the Oxlint configuration
+The new pages intentionally continue using the existing data exports and CSS class names.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 3. Routes
+/
+ /about
+ /products
+ /solutions
+ /compliance
+ /how-to-order
+ /contact
+
+## 4. Important
+The old IntersectionObserver in App.jsx is no longer needed because each section is now a real route.
+
+The existing data-driven arrays such as CATEGORIES, BRANDS, CLIENTS, REGULATORY,
+ADVANTAGES, STEPS, VALUES and TARGET_SECTORS remain the source of the corresponding
+content.
+
+## 5. Development
+npm run dev
+
+If deploying as a Cloudflare Worker/SPA, make sure the deployment serves index.html
+for unknown application routes so direct visits such as /products do not return 404.
