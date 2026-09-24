@@ -2,12 +2,13 @@ import { Link } from 'react-router-dom'
 
 export default function PageHero({ eyebrow, title, text,  backgroundImage, action = true }) {
   return (
-    <section className="page-hero">  
-    <img
+    <section className="page-hero">
+      <img
         className="page-hero-image"
         src={backgroundImage}
         alt=""
       />
+      <div className="page-hero-overlay" />
       <div className="wrap page-hero-inner">
         {eyebrow ? <p className="section-kicker">{eyebrow}</p> : null}
         <h1>{title}</h1>

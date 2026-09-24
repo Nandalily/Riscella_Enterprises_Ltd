@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { STEPS } from '../data'
 import PageHero from '../components/PageHero'
-import solutionImg from '../assets/nana.jpg'
+import equipmentImg from '../assets/equipment.jpg'
 
 export default function HowToOrder() {
   return (
@@ -10,7 +10,7 @@ export default function HowToOrder() {
         eyebrow="How to Order"
         title="A structured, transparent procurement process."
         text="Our four-step procurement framework makes product sourcing seamless, transparent, and audit-ready."
-        backgroundImage={nanaImg}
+        backgroundImage={equipmentImg}
       />
 
       <section className="section paper">

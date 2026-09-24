@@ -3,7 +3,7 @@ import { Icon } from '../icons'
 import { Link } from 'react-router-dom'
 import QuoteForm from '../components/QuoteForm'
 import PageHero from '../components/PageHero'
-import nanaImg from '../assets/nana.jpg'
+import laboratoryImg from '../assets/Laboratory.jpg'
 
 export default function Contact() {
   return (
@@ -13,7 +13,7 @@ export default function Contact() {
         title="Talk to our technical desk."
         text="Send your RFQ, product requirements, preferred standards, or technical sourcing request and our team can review the details."
         action={false}
-        backgroundImage={nanaImg}
+        backgroundImage={laboratoryImg}
       />
 
       <section className="section contact">

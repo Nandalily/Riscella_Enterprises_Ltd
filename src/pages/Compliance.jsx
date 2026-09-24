@@ -1,7 +1,7 @@
 import { ADVANTAGES, REGULATORY } from '../data'
 import { Icon } from '../icons'
 import PageHero from '../components/PageHero'
-import nanaImg from '../assets/nana.jpg'
+import laboratoryImg from '../assets/Laboratory.jpg'
 
 export default function Compliance() {
   return (
@@ -10,7 +10,7 @@ export default function Compliance() {
         eyebrow="Compliance"
         title="Regulatory framework alignment."
         text="Riscella operates under stringent quality management frameworks to support audit-ready laboratory and manufacturing environments."
-        backgroundImage={nanaImg}
+        backgroundImage={laboratoryImg}
       />
 
       <section className="section paper">

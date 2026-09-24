@@ -2,7 +2,6 @@ import { CATEGORIES, BRANDS } from '../data'
 import { Icon } from '../icons'
 import PageHero from '../components/PageHero'
 import product3Img from '../assets/product3.jpg'
-import nanaImg from '../assets/nana.jpg'
 
 export default function Products() {
   return (
@@ -15,9 +14,7 @@ export default function Products() {
       />
 
       <section className="section paper products-section">
-  {/* <img className="hero-bg" src={nanaImg} alt="" /> */}
-
-  <div className="wrap products-content">     
+        <div className="wrap products-content">
           <p className="section-kicker">Product Categories</p>
           <h2 className="heading-lg">Core product categories</h2>
 

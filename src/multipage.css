@@ -149,7 +149,7 @@ a { color: inherit; }
 }
 
 .hero {
-  min-height: 690px;
+  min-height: 172px;
   position: relative;
   overflow: hidden;
   display: grid;
@@ -174,7 +174,9 @@ a { color: inherit; }
 .hero-copy {
   position: relative;
   z-index: 1;
-  padding-block: 90px;
+  padding: 45px 24px;
+  margin-inline: 0 auto;
+  text-align: left;
 }
 
 .hero-copy .section-kicker { color: #a8e2da; }
@@ -182,13 +184,13 @@ a { color: inherit; }
 .hero h1 {
   max-width: 900px;
   margin: 12px 0 24px;
-  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-size: clamp(1.9rem, 4vw, 3.5rem);
   line-height: 1.03;
   letter-spacing: -.045em;
 }
 
 .hero-actions {
-  max-width: 780px;
+  width: 100%;
 }
 
 .hero-actions > p {
@@ -202,6 +204,8 @@ a { color: inherit; }
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 25px;
+  width: 100%;
+  justify-content: center;
 }
 
 .section {
@@ -385,25 +389,50 @@ a { color: inherit; }
 .adv p { margin: 0; color: var(--riscella-muted); }
 
 .page-hero {
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
   padding: 100px 0 80px;
-  background:
-    radial-gradient(circle at 80% 20%, rgba(15,118,110,.14), transparent 35%),
-    linear-gradient(135deg, #edf7f5, #fff);
-  border-bottom: 1px solid var(--riscella-line);
+  background: var(--riscella-ink);
+  color: #fff;
 }
 
-.page-hero-inner { max-width: 980px; }
+.page-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(4, 27, 27, .9), rgba(4, 27, 27, .62) 55%, rgba(4, 27, 27, .3));
+  z-index: 1;
+}
+
+.page-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 980px;
+}
+.page-hero .section-kicker { color: #a8e2da; }
 .page-hero h1 {
   max-width: 900px;
   margin: 8px 0 18px;
-  font-size: clamp(2.5rem, 5vw, 4.7rem);
+  font-size: clamp(2.1rem, 4.5vw, 4rem);
   line-height: 1.04;
   letter-spacing: -.045em;
 }
 .page-hero p:not(.section-kicker) {
   max-width: 800px;
   font-size: 1.12rem;
-  color: var(--riscella-muted);
+  color: rgba(255, 255, 255, .88);
 }
 
 .split {
@@ -458,6 +487,10 @@ a { color: inherit; }
   padding: 10px 0;
 }
 
+.products-section {
+  background: #fff;
+}
+
 .categories-timeline::before {
   content: "";
   position: absolute;
@@ -465,7 +498,8 @@ a { color: inherit; }
   bottom: 0;
   left: 50%;
   width: 2px;
-  background: #c8ddd9;
+  background: #013362;
+  /* weight: 400; */
 }
 
 .category-timeline-item {
@@ -486,7 +520,7 @@ a { color: inherit; }
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: var(--riscella-green);
+  /* background: var(--riscella-green); */
   border: 4px solid #edf7f5;
   box-shadow: 0 0 0 2px var(--riscella-green);
 }
@@ -497,11 +531,12 @@ a { color: inherit; }
 }
 
 .category-card {
-  background: #fff;
-  border: 1px solid var(--riscella-line);
+  background: rgb(94, 150, 152);
+  border: 1px solid var(--riscella-green-dark);
   border-radius: var(--riscella-radius);
   padding: 25px;
-  box-shadow: var(--riscella-shadow);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(4, 185, 170, 0.14);
 }
 
 .category-card-header {
@@ -513,12 +548,14 @@ a { color: inherit; }
 .category-card-header .category-icon {
   margin: 0;
   flex: 0 0 48px;
+  color: #fff;
+  background: rgba(255, 255, 255, .16);
 }
 
 .category-card-header h3 { margin: 0; }
 
 .category-range,
-.category-applications { color: var(--riscella-muted); }
+.category-applications { color: rgba(255, 255, 255, .86); }
 
 .note {
   margin-top: 35px;
@@ -746,13 +783,15 @@ a { color: inherit; }
 @media (max-width: 760px) {
   .wrap { width: min(100% - 28px, 1180px); }
   .section { padding: 65px 0; }
-  .hero { min-height: 650px; }
-  .hero-copy { padding: 70px 0; }
-  .hero h1 { font-size: clamp(2.5rem, 12vw, 4rem); }
+  .hero { min-height: 162px; }
+  .hero-copy { padding: 35px 16px; }
+  .hero h1 { font-size: clamp(1.75rem, 8vw, 2.6rem); }
   .hero-buttons,
   .home-hook,
   .split-heading,
   .order-details { flex-direction: column; align-items: stretch; }
+
+  .hero-buttons { align-items: center; }
 
   .cards-4,
   .feature-grid,

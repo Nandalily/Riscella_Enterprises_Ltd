@@ -1,7 +1,7 @@
 import { TARGET_SECTORS, VALUES } from '../data'
 import { Icon } from '../icons'
 import PageHero from '../components/PageHero'
-import solutionImg from '../assets/nana.jpg'
+import laboratoryImg from '../assets/Laboratory.jpg'
 
 export default function About() {
   return (
@@ -10,7 +10,7 @@ export default function About() {
         eyebrow="About Riscella"
         title="A scientific supply partner built around technical expertise."
         text="Riscella Enterprises Limited bridges world-class global scientific manufacturers and local industries through compliance-verified sourcing, cold-chain distribution, and technical deployment."
-        backgroundImage={solutionImg}
+        backgroundImage={laboratoryImg}
       />
 
       <section className="section">
