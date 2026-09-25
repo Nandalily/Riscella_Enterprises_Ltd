@@ -21,8 +21,10 @@ export default function Header() {
       <div className="wrap nav">
         <Link className="brand" to="/" onClick={closeMenu}>
           <span className="brand-name">
-            RISCELLA <span className="brand-ltd">ENTERPRISES LTD</span>
-          </span>
+            RISCELLA 
+            </span>
+            <span className="brand-ltd">ENTERPRISES LTD</span>
+          
           <span className="brand-tag">EXCEEDING IMAGINATIONS</span>
         </Link>
 

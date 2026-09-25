@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { STEPS } from '../data'
 import PageHero from '../components/PageHero'
-import equipmentImg from '../assets/equipment.jpg'
+import equipmentImg from '../assets/protectives.jpg'
 
 export default function HowToOrder() {
   return (

@@ -1,7 +1,7 @@
 import { ADVANTAGES, REGULATORY } from '../data'
 import { Icon } from '../icons'
 import PageHero from '../components/PageHero'
-import laboratoryImg from '../assets/Laboratory.jpg'
+import laboratoryImg from '../assets/reagent.jpg'
 
 export default function Compliance() {
   return (

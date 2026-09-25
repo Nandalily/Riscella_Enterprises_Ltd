@@ -1,7 +1,7 @@
 import { TARGET_SECTORS, VALUES } from '../data'
 import { Icon } from '../icons'
 import PageHero from '../components/PageHero'
-import laboratoryImg from '../assets/Laboratory.jpg'
+import laboratoryImg from '../assets/hero 1.jpg'
 
 export default function About() {
   return (

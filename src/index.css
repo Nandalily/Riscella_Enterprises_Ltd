@@ -97,14 +97,14 @@ textarea {
 .brand-name {
   font-family: var(--heading);
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.45rem;
   letter-spacing: 0.04em;
-  color: var(--navy);
+  color: rgb(2, 2, 99);
 }
 
 .brand-ltd {
-  font-size: 0.72rem;
-  font-weight: 600;
+  font-size: 0.62rem;
+  font-weight: 500;
   letter-spacing: 0.04em;
   color: var(--navy);
 }
@@ -368,7 +368,7 @@ textarea {
 .brand-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 12px;
   margin-top: 22px;
   
   
@@ -745,7 +745,7 @@ textarea {
 }
 
 .site-footer {
-  background: var(--navy-deep);
+  background: blue;
   border-top: 1px solid var(--navy-line);
   color: #6e7c90;
   font-size: 0.78rem;

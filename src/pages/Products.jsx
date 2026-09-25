@@ -1,7 +1,7 @@
 import { CATEGORIES, BRANDS } from '../data'
 import { Icon } from '../icons'
 import PageHero from '../components/PageHero'
-import product3Img from '../assets/product3.jpg'
+import product3Img from '../assets/image3.png'
 
 export default function Products() {
   return (

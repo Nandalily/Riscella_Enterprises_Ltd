@@ -1,7 +1,7 @@
 import { CLIENTS, SECTORS } from '../data'
 import { Icon } from '../icons'
 import PageHero from '../components/PageHero'
-import solutionImg from '../assets/solution.jpg'
+import solutionImg from '../assets/equip.jpg'
 
 export default function Solutions() {
   return (
